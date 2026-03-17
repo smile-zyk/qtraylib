@@ -8,9 +8,9 @@
             "cacheVariables": {
                 "CMAKE_CONFIGURATION_TYPES": "Debug;Release;RelWithDebInfo",
                 "CMAKE_EXPORT_COMPILE_COMMANDS": true,
-                "CMAKE_TOOLCHAIN_FILE": {
-                    "value": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
-                    "type": "FILEPATH"
+                "Qt5_DIR" : {
+                    "value": "$env{Qt5_PREFIX_PATH}/lib/cmake/Qt5",
+                    "type": "PATH"
                 }
             },
             "binaryDir": "build"
@@ -20,9 +20,7 @@
             "inherits": "base",
             "cacheVariables": {
                 "CMAKE_CXX_COMPILER": "cl",
-                "CMAKE_C_COMPILER": "cl",
-                "VCPKG_TARGET_TRIPLET" : "x64-windows",
-                "VCPKG_HOST_TRIPLET" : "x64-windows"
+                "CMAKE_C_COMPILER": "cl"
             },
             "toolset": {
                 "value": "v143"
@@ -33,9 +31,7 @@
             "inherits": "base",
             "cacheVariables": {
                 "CMAKE_CXX_COMPILER": "g++",
-                "CMAKE_C_COMPILER": "gcc",
-                "VCPKG_TARGET_TRIPLET" : "x64-mingw-dynamic",
-                "VCPKG_HOST_TRIPLET" : "x64-mingw-dynamic"
+                "CMAKE_C_COMPILER": "gcc"
             }
         }
     ],
